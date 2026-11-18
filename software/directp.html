@@ -5,28 +5,8 @@
   <title>Download DirectP</title>
 </head>
 <body>
-  <button id="download">Click here if download didn't start</button>
-
-  <script>
-    const html = `<!doctype html>
-<html lang="en">
-<head><meta charset="utf-8"><title>Download DirectP</title></head>
-</html>`;
-
-    const file = new Blob([html], { type: "text/html" });
-    const url = URL.createObjectURL(file);
-
-    function downloadFile() {
-      const link = document.createElement("a");
-      link.href = url;
-      link.download = "https://furpri.de/software/directproxy.html";
-      link.click();
-    }
-
-    window.addEventListener("load", downloadFile);
-    document.getElementById("download").addEventListener("click", downloadFile);
-
-    setTimeout(() => URL.revokeObjectURL(url), 60000);
-  </script>
+  <a href="https://furpri.de/software/directproxy.html" download="directproxy.html">
+    Download DirectP
+  </a>
 </body>
 </html>
